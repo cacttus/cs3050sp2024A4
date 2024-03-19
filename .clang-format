@@ -1,0 +1,34 @@
+﻿---
+BasedOnStyle: Google
+FixNamespaceComments: true
+ReflowComments: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AccessModifierOffset: '-2'
+AlwaysBreakTemplateDeclarations: true
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+IncludeBlocks: Preserve
+PointerAlignment: Left
+SortIncludes: false
+ColumnLimit: 99999 # zero causes enum vals to wrap
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel:  false
+  AfterClass:      false
+  AfterControlStatement: false
+  AfterEnum:       false
+  AfterFunction:   false
+  AfterNamespace:  false
+  AfterObjCDeclaration: false
+  AfterStruct:     false
+  AfterUnion:      false
+  BeforeCatch:     true
+  BeforeElse:      true
+  IndentBraces:    false
+AllowShortBlocksOnASingleLine: false #true
+AllowShortFunctionsOnASingleLine: Inline #None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+...
