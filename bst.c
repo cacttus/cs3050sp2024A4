@@ -179,12 +179,11 @@ void *serach_bst(BSTNode *n, int64 key) {
     return n->_satellite;
   }
   if (key < n->_key) {
-    serach_bst(n->_left, key);
+    return serach_bst(n->_left, key);
   }
   else {
-    serach_bst(n->_right, key);
+    return serach_bst(n->_right, key);
   }
-  return NULL;
 }
 BSTNode *tree_minimum(BSTNode *p) {
   BSTNode *pr = p;
