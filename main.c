@@ -137,6 +137,7 @@ int main(void) {
   print_tree(pBST);
   InOrder(pBST, PrintCustomer);
   printf("\n");
+
   // Insert a couple of customers to the tree and then print the InOrder
   Customer c = {"Ned", "Needleman", 000000};
   Customer d = {"Lou", "Reed", 654321};
@@ -147,4 +148,8 @@ int main(void) {
   TreeInsert(pBST, &d, d.iAccountNumber);
   InOrder(pBST, PrintCustomer);
   printf("\n");
+  while (pBST->_root != NULL) {
+    TreeDelete(pBST, pBST->_root->_key);
+  }
+  free(pBST);
 }

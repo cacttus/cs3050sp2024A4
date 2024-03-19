@@ -250,16 +250,12 @@ void tree_delete(BST *pBST, BSTNode *z, int64 key) {
       BSTNode *y = tree_minimum(z->_right);  //
       msg("tree min = %lld", y->_key);
       if (y != z->_right) {
-        msg("got here1");
-        //  transplant(pBST, y, y->_right);
-        //  msg("got here2");
+        transplant(pBST, y, y->_right);
         y->_right = z->_right;
         y->_right->_parent = y;
       }
 
-      // msg("got here3");
       transplant(pBST, z, y);
-      //  msg("got here4");
       y->_left = z->_left;
       y->_left->_parent = y;
     }
@@ -287,8 +283,6 @@ void *Search(BST *pBST, int64 key) {
   return serach_bst(pBST->_root, key);
 }
 void TreeDelete(BST *pBST, int64 key) {
-  msg("delete, tree pre:");
-  print_tree(pBST);
   tree_delete(pBST, pBST->_root, key);
 }
 void TreeInsert(BST *pBST, void *satellite, int64 key) {
